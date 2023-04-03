@@ -1,0 +1,113 @@
+.conteiner{
+    height: 900px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr ;
+    grid-template-areas: 
+    'footer1 footer1 footer1 footer1'
+    'nav nav nav nav'
+    'sidebar sidebar sidebar main'
+    'content1 content1 content2 content3'
+    'footer footer footer footer'
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    background-color: wheat;
+    align-items: center;
+    padding: 10px;
+    height: 100%;
+}
+.footer1{
+    background-color: #61B5EE ;
+    grid-area: footer1;
+    height: 50px;
+}
+
+nav a{
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+nav a:hover{
+    color: darkgrey;
+}
+nav{
+background-color:yellow ;
+grid-area:nav ;
+}
+main{
+    background-color: #C8CACC;
+    grid-area:main ;
+}
+#sidebar{
+    background-color: #F83F3F;
+        grid-area: sidebar;
+}
+#content1{
+    background-color: #71FE66;
+    grid-area: content1;
+}
+#content2{
+    background-color: wheat;
+    grid-area: content2;
+}
+#content3{
+    background-color: gray;
+    grid-area:content3 ;
+}
+footer{
+    background-color: #61B5EE;
+    grid-area: footer;
+    height: 100px;
+}
+
+@media only  screen and (max-width:550px){  
+
+    
+.conteiner{
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 04fr 2.5fr 1.2fr 1.2fr 1.2fr 1fr;
+    grid-template-areas: 'footer1'
+    'nav'
+    'sidebar'
+    'content1'
+'content2'
+'content3'
+    'footer';
+}
+    
+}
+.conteiner2{
+    height: 900px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr ;
+    grid-template-areas: 
+    'footer1 footer1 footer1 footer1'
+    'main main sidebar sidebar'
+    'main main sidebar sidebar '
+    'main main sidebar sidebar'
+    'footer footer footer footer'}
+  
+    @media only  screen and (max-width:550px){  
+
+    
+        .conteiner2{
+            grid-template-columns: 1fr ;
+            grid-template-rows: 0,2fr 1f 1fr 0,6fr;
+            grid-template-areas:
+            'footer1'
+            'main'
+            'sidebar'
+            'footer';
+        }
+    }
